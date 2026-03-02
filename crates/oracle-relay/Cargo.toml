@@ -1,0 +1,23 @@
+﻿[package]
+name = "oracle-relay"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+name = "oracle_relay"
+
+[[bin]]
+name = "oracle-relay"
+path = "src/main.rs"
+
+[dependencies]
+parking_lot.workspace = true
+tokio.workspace = true
+thiserror.workspace = true
+anyhow.workspace = true
+serde.workspace = true
+bincode.workspace = true
+tracing.workspace = true
+
+oracle-core = { path = "../oracle-core" }
+oracle-networking = { path = "../oracle-networking" }

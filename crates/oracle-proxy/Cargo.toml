@@ -1,0 +1,11 @@
+[package]
+name = "oracle-proxy"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+name = "user32"
+
+[dependencies]
+winapi = { version = "0.3", features = ["libloaderapi", "winnt", "minwindef"] }

@@ -1,0 +1,23 @@
+﻿[package]
+name = "steam-api-32"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+name = "steam_api"
+
+[dependencies]
+parking_lot.workspace = true
+once_cell.workspace = true
+lazy_static.workspace = true
+
+oracle-core = { path = "../oracle-core" }
+oracle-callbacks = { path = "../oracle-callbacks" }
+oracle-networking = { path = "../oracle-networking" }
+oracle-storage = { path = "../oracle-storage" }
+oracle-ugc = { path = "../oracle-ugc" }
+oracle-input = { path = "../oracle-input" }
+
+[target.'cfg(windows)'.dependencies]
+winapi = { workspace = true }

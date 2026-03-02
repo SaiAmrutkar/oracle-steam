@@ -1,0 +1,27 @@
+﻿[package]
+name = "oracle-server"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+name = "oracle_server"
+
+[[bin]]
+name = "oracle-server"
+path = "src/main.rs"
+
+[dependencies]
+parking_lot.workspace = true
+tokio.workspace = true
+thiserror.workspace = true
+anyhow.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+hyper = { workspace = true }
+rusqlite = { workspace = true }
+chrono.workspace = true
+tracing.workspace = true
+
+oracle-core = { path = "../oracle-core" }
+oracle-networking = { path = "../oracle-networking" }
+oracle-storage = { path = "../oracle-storage" }

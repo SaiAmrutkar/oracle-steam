@@ -1,0 +1,18 @@
+﻿[package]
+name = "oracle-overlay"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+name = "oracle_overlay"
+
+[dependencies]
+parking_lot.workspace = true
+thiserror.workspace = true
+anyhow.workspace = true
+
+oracle-core = { path = "../oracle-core" }
+
+[target.'cfg(windows)'.dependencies]
+winapi = { workspace = true }
+# Remove: minhook.workspace = true

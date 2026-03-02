@@ -1,0 +1,11 @@
+[package]
+name = "oracle-protocol"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+name = "oracle_protocol" # ← add this
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true

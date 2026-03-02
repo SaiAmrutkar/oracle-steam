@@ -1,0 +1,20 @@
+﻿[package]
+name = "oracle-callbacks"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+name = "oracle_callbacks"
+
+[dependencies]
+parking_lot.workspace = true
+lazy_static.workspace = true
+once_cell.workspace = true
+thiserror.workspace = true
+anyhow.workspace = true
+serde.workspace = true
+
+oracle-core = { path = "../oracle-core" }
+
+[target.'cfg(windows)'.dependencies]
+winapi = { workspace = true }

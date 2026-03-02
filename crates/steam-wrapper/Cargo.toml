@@ -1,0 +1,16 @@
+﻿[package]
+name = "steam-wrapper"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+name = "steam"
+
+[dependencies]
+once_cell.workspace = true
+
+oracle-core = { path = "../oracle-core" }
+
+[target.'cfg(windows)'.dependencies]
+winapi = { workspace = true }

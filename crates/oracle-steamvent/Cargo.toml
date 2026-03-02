@@ -1,0 +1,14 @@
+[package]
+name = "oracle-steamvent"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+name = "oracle_steamvent"
+
+[dependencies]
+tokio.workspace = true
+parking_lot.workspace = true
+anyhow.workspace = true
+serde.workspace = true
+serde_json.workspace = true

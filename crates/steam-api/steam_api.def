@@ -1,0 +1,92 @@
+LIBRARY steam_api64
+EXPORTS
+    ; Core
+    SteamAPI_Init
+    SteamAPI_Shutdown
+    SteamAPI_RestartAppIfNecessary
+    SteamAPI_RunCallbacks
+    SteamAPI_GetHSteamPipe
+    SteamAPI_GetHSteamUser
+
+    ; SteamUser
+    SteamAPI_ISteamUser_GetSteamID
+    SteamAPI_ISteamUser_BLoggedOn
+    SteamAPI_ISteamUser_GetPlayerSteamLevel
+
+    ; SteamFriends
+    SteamAPI_ISteamFriends_GetPersonaName
+    SteamAPI_ISteamFriends_SetPersonaName
+    SteamAPI_ISteamFriends_GetFriendCount
+
+    ; SteamUserStats
+    SteamAPI_ISteamUserStats_RequestCurrentStats
+    SteamAPI_ISteamUserStats_GetAchievement
+    SteamAPI_ISteamUserStats_SetAchievement
+    SteamAPI_ISteamUserStats_ClearAchievement
+    SteamAPI_ISteamUserStats_StoreStats
+    SteamAPI_ISteamUserStats_GetStatInt
+    SteamAPI_ISteamUserStats_GetStatFloat
+    SteamAPI_ISteamUserStats_SetStatInt
+    SteamAPI_ISteamUserStats_SetStatFloat
+
+    ; SteamMatchmaking
+    SteamAPI_ISteamMatchmaking_CreateLobby
+    SteamAPI_ISteamMatchmaking_JoinLobby
+    SteamAPI_ISteamMatchmaking_LeaveLobby
+    SteamAPI_ISteamMatchmaking_SetLobbyData
+    SteamAPI_ISteamMatchmaking_GetLobbyData
+
+    ; SteamNetworking
+    SteamAPI_ISteamNetworking_SendP2PPacket
+    SteamAPI_ISteamNetworking_IsP2PPacketAvailable
+    SteamAPI_ISteamNetworking_ReadP2PPacket
+    SteamAPI_ISteamNetworking_AcceptP2PSessionWithUser
+    SteamAPI_ISteamNetworking_CloseP2PSessionWithUser
+
+    ; SteamApps
+    SteamAPI_ISteamApps_BIsSubscribedApp
+    SteamAPI_ISteamApps_BIsDlcInstalled
+    SteamAPI_ISteamApps_GetCurrentGameLanguage
+    SteamAPI_ISteamApps_GetAppInstallDir
+    SteamAPI_ISteamApps_GetCurrentBetaName
+
+
+    ; ------------------------------
+    ; GameServer
+    ; ------------------------------
+    SteamAPI_ISteamGameServer_InitGameServer
+    SteamAPI_ISteamGameServer_SetProduct
+    SteamAPI_ISteamGameServer_LogOn
+    SteamAPI_ISteamGameServer_BLoggedOn
+
+
+    ; ------------------------------
+    ; HTTP
+    ; ------------------------------
+    SteamAPI_ISteamHTTP_CreateHTTPRequest
+    SteamAPI_ISteamHTTP_SendHTTPRequest
+    SteamAPI_ISteamHTTP_GetHTTPResponseBodyData
+
+
+    ; ------------------------------
+    ; Inventory
+    ; ------------------------------
+    SteamAPI_ISteamInventory_GetAllItems
+    SteamAPI_ISteamInventory_GenerateItems
+    SteamAPI_ISteamInventory_ConsumeItem
+
+
+    ; ------------------------------
+    ; Music
+    ; ------------------------------
+    SteamAPI_ISteamMusic_Play
+    SteamAPI_ISteamMusic_SetVolume
+    SteamAPI_ISteamMusicRemote_RegisterSteamMusicRemote
+
+
+    ; ------------------------------
+    ; HTMLSurface
+    ; ------------------------------
+    SteamAPI_ISteamHTMLSurface_Init
+    SteamAPI_ISteamHTMLSurface_CreateBrowser
+    SteamAPI_ISteamHTMLSurface_LoadURL

@@ -1,0 +1,25 @@
+﻿[package]
+name = "oracle-core"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+name = "oracle_core"
+
+[dependencies]
+parking_lot.workspace = true
+once_cell.workspace = true
+lazy_static.workspace = true
+thiserror.workspace = true
+anyhow.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+bincode.workspace = true
+tokio.workspace = true
+async-trait.workspace = true
+tracing.workspace = true
+chrono.workspace = true
+rusqlite = { workspace = true }
+
+[target.'cfg(windows)'.dependencies]
+winapi = { workspace = true }

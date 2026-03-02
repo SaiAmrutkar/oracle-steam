@@ -1,0 +1,19 @@
+﻿[package]
+name = "oracle-input"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+name = "oracle_input"
+
+[dependencies]
+parking_lot.workspace = true
+thiserror.workspace = true
+anyhow.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+
+oracle-core = { path = "../oracle-core" }
+
+[target.'cfg(windows)'.dependencies]
+winapi = { workspace = true }

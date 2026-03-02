@@ -1,0 +1,19 @@
+﻿[package]
+name = "oracle-voice"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+name = "oracle_voice"
+
+[dependencies]
+parking_lot.workspace = true
+thiserror.workspace = true
+anyhow.workspace = true
+tokio.workspace = true
+
+oracle-core = { path = "../oracle-core" }
+oracle-networking = { path = "../oracle-networking" }
+
+[target.'cfg(windows)'.dependencies]
+winapi = { workspace = true }
